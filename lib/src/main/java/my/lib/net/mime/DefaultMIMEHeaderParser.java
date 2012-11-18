@@ -78,8 +78,8 @@ public class DefaultMIMEHeaderParser implements MIMEHeaderParser {
 			throw new MIMEParserException("field body not found: header=" + header);
 		}
 
-		boolean existsParam = paramName.length() > 0 && paramBody.length() > 0;
-		if ( existsParam ) {
+		boolean existsLastParam = paramName.length() > 0 && paramBody.length() > 0;
+		if ( existsLastParam ) {
 			addNewParam(paramName, paramBody, params);
 		}
 		

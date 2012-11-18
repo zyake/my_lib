@@ -14,7 +14,7 @@ public class DefaultMultipartMessageParser implements MultipartMessageParser {
 		OnHeader,
 		OnBody
 	}
-//	
+
 	public DefaultMultipartMessageParser setHeaderParser(MIMEHeaderParser parser) {
 		Assert.notNull(parser, "parser");
 		
@@ -96,22 +96,20 @@ public class DefaultMultipartMessageParser implements MultipartMessageParser {
 			}
 		}
 		
-		addNewBodyPart(headers, bodyParts, entityLines);
+		boolean reachEndWithoutEpilogueDelimiter = entityLines.length() > 1;
+		if ( reachEndWithoutEpilogueDelimiter ) {
+			addNewBodyPart(headers, bodyParts, entityLines);
+		}
 		
 		return new MultipartMessage(bodyParts);
 	}
 
 	private void addNewBodyPart(List<MIMEHeader> headers,
-			List<BodyPart> bodyParts, StringBuilder entityLines) {
-		boolean existsEntity = 
-				entityLines.length() > 1 && 
-				!MIMEUtil.MESSAGE_SEPARATOR.equals(entityLines.toString());
-		if ( existsEntity ) {
-			entityLines
-			.deleteCharAt(entityLines.length() - 1)
-			.deleteCharAt(entityLines.length() - 1);
-			BodyPart bodyPart = new BodyPart(entityLines.toString(), headers);
-			bodyParts.add(bodyPart);
-		}
+		List<BodyPart> bodyParts, StringBuilder entityLines) {
+		entityLines
+		.deleteCharAt(entityLines.length() - 1)
+		.deleteCharAt(entityLines.length() - 1);
+		BodyPart bodyPart = new BodyPart(entityLines.toString(), headers);
+		bodyParts.add(bodyPart);
 	}
 }
