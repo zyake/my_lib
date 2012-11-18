@@ -3,6 +3,8 @@ package my.lib.net.mime;
 import java.util.ArrayList;
 import java.util.List;
 
+import my.lib.common.Assert;
+
 public class DefaultMIMEHeaderParser implements MIMEHeaderParser {
 
 	private enum ParseStates {
@@ -13,6 +15,8 @@ public class DefaultMIMEHeaderParser implements MIMEHeaderParser {
 	}
 	
 	public MIMEHeader parseHeader(String header) {
+		Assert.notNull(header, "header");
+		
 		ParseStates state = ParseStates.SearchFieldName;
 		StringBuilder fieldName = new StringBuilder();
 		StringBuilder fieldBody = new StringBuilder();
