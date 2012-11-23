@@ -27,11 +27,11 @@ public class FormDataFieldInjectorTest {
 	@Test
 	public void testInject01() throws Exception {
 		// initialize
-		List<MIMEParam> params = new ArrayList<MIMEParam>();
+		List<MIMEParam> params = new ArrayList<>();
 		Collections.addAll(params,
 				new MIMEParam("name", "name"));
 
-		List<MIMEHeader> headers = new ArrayList<MIMEHeader>();
+		List<MIMEHeader> headers = new ArrayList<>();
 		Collections.addAll(headers,
 				new MIMEHeader("content-disposition", "form-data", params));
 
@@ -53,11 +53,11 @@ public class FormDataFieldInjectorTest {
 	@Test(expected=MIMEConvertException.class)
 	public void testInject02() throws Exception {
 		// initialize
-		List<MIMEParam> params = new ArrayList<MIMEParam>();
+		List<MIMEParam> params = new ArrayList<>();
 		Collections.addAll(params,
 				new MIMEParam("name", "piyo"));
 
-		List<MIMEHeader> headers = new ArrayList<MIMEHeader>();
+		List<MIMEHeader> headers = new ArrayList<>();
 		Collections.addAll(headers,
 				new MIMEHeader("content-disposition", "form-data", params));
 
@@ -76,11 +76,11 @@ public class FormDataFieldInjectorTest {
 	@Test(expected=MIMEConvertException.class)
 	public void testInject03() throws Exception {
 		// initialize
-		List<MIMEParam> params = new ArrayList<MIMEParam>();
+		List<MIMEParam> params = new ArrayList<>();
 		Collections.addAll(params,
 				new MIMEParam("name", "name"));
 
-		List<MIMEHeader> headers = new ArrayList<MIMEHeader>();
+		List<MIMEHeader> headers = new ArrayList<>();
 		Collections.addAll(headers,
 				new MIMEHeader("content-disposition", "form-data?", params));
 
@@ -99,11 +99,11 @@ public class FormDataFieldInjectorTest {
 	@Test
 	public void testInject04() throws Exception {
 		// initialize
-		List<MIMEParam> params = new ArrayList<MIMEParam>();
+		List<MIMEParam> params = new ArrayList<>();
 		Collections.addAll(params,
 				new MIMEParam("name", "name"));
 
-		List<MIMEHeader> headers = new ArrayList<MIMEHeader>();
+		List<MIMEHeader> headers = new ArrayList<>();
 		Collections.addAll(headers,
 				new MIMEHeader("Content-Disposition", "form-data", params));
 

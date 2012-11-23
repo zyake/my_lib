@@ -10,7 +10,7 @@ public class MIMEHeader {
 
 	private String fieldBody;
 
-	private List<MIMEParam> params = new ArrayList<MIMEParam>();
+	private List<MIMEParam> params = new ArrayList<>();
 
 	public MIMEHeader(String fieldName, String fieldBody, List<MIMEParam> params) {
 		this.fieldName = fieldName;

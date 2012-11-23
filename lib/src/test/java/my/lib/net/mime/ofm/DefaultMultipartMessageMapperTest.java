@@ -31,7 +31,7 @@ public class DefaultMultipartMessageMapperTest {
 	@Test
 	public void testMapToObject01() {
 		// initialize
-		List<EntityConverter> converters = new ArrayList<EntityConverter>();
+		List<EntityConverter> converters = new ArrayList<>();
 		{
 			EntityAcceptor acceptor = new FormDataNameAcceptor("name").or(new FormDataNameAcceptor("address"));
 			converters.add(new TextEntityConverter(acceptor));
@@ -44,27 +44,27 @@ public class DefaultMultipartMessageMapperTest {
 				converters, new FormDataFieldInjector());
 
 		// test
-		List<BodyPart> bodyParts = new ArrayList<BodyPart>();
+		List<BodyPart> bodyParts = new ArrayList<>();
 		{
-			List<MIMEParam> params = new ArrayList<MIMEParam>();
+			List<MIMEParam> params = new ArrayList<>();
 			params.add(new MIMEParam("name", "name"));
-			List<MIMEHeader> headers = new ArrayList<MIMEHeader>();
+			List<MIMEHeader> headers = new ArrayList<>();
 			headers.add(new MIMEHeader("Content-Disposition",  "form-data", params));
 
 			bodyParts.add(new BodyPart("name1", headers));
 		}
 		{
-			List<MIMEParam> params = new ArrayList<MIMEParam>();
+			List<MIMEParam> params = new ArrayList<>();
 			params.add(new MIMEParam("name", "address"));
-			List<MIMEHeader> headers = new ArrayList<MIMEHeader>();
+			List<MIMEHeader> headers = new ArrayList<>();
 			headers.add(new MIMEHeader("Content-Disposition",  "form-data", params));
 
 			bodyParts.add(new BodyPart("address1", headers));
 		}
 		{
-			List<MIMEParam> params = new ArrayList<MIMEParam>();
+			List<MIMEParam> params = new ArrayList<>();
 			params.add(new MIMEParam("name", "birthday"));
-			List<MIMEHeader> headers = new ArrayList<MIMEHeader>();
+			List<MIMEHeader> headers = new ArrayList<>();
 			headers.add(new MIMEHeader("Content-Disposition",  "form-data", params));
 
 			bodyParts.add(new BodyPart("19870205", headers));

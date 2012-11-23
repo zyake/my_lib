@@ -22,7 +22,7 @@ public class DefaultMIMEHeaderParser implements MIMEHeaderParser {
 		StringBuilder fieldBody = new StringBuilder();
 		StringBuilder paramName = new StringBuilder();
 		StringBuilder paramBody = new StringBuilder();
-		List<MIMEParam> params = new ArrayList<MIMEParam>();
+		List<MIMEParam> params = new ArrayList<>();
 
 		for ( int i = 0 ; i < header.length() ; i ++ ) {
 			char currentChar = header.charAt(i);

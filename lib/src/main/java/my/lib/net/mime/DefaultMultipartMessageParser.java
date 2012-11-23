@@ -8,7 +8,7 @@ import my.lib.common.Assert;
 public class DefaultMultipartMessageParser implements MultipartMessageParser {
 
 	private MIMEHeaderParser headerParser = new DefaultMIMEHeaderParser();
-	
+
 	private enum ParserStates {
 		OnStart,
 		OnHeader,
@@ -17,25 +17,25 @@ public class DefaultMultipartMessageParser implements MultipartMessageParser {
 
 	public DefaultMultipartMessageParser setHeaderParser(MIMEHeaderParser parser) {
 		Assert.notNull(parser, "parser");
-		
+
 		this.headerParser = parser;
-		
+
 		return this;
 	}
-	
+
 	public MIMEHeaderParser getHeaderParser() {
 		return headerParser;
 	}
-	
+
 	public MultipartMessage parseMessage(String msg) {
 		Assert.notNull(msg, "msg");
-		
-		List<MIMEHeader> headers = new ArrayList<MIMEHeader>();
+
+		List<MIMEHeader> headers = new ArrayList<>();
 		StringBuilder headerLine = new StringBuilder();
-		
-		List<BodyPart> bodyParts = new ArrayList<BodyPart>();
+
+		List<BodyPart> bodyParts = new ArrayList<>();
 		StringBuilder entityLines = new StringBuilder();
-		
+
 		ParserStates state = ParserStates.OnStart;
 		String delimiter = null;
 		String[] lines = msg.split(MIMEUtil.MESSAGE_SEPARATOR);
@@ -51,43 +51,43 @@ public class DefaultMultipartMessageParser implements MultipartMessageParser {
 					delimiter = currentLine;
 					state = ParserStates.OnHeader;
 					break;
-				
+
 				case OnHeader:
 					boolean isFolded = currentLine.startsWith(" ");
 					if ( isFolded ) {
 						headerLine.append(currentLine.trim());
 						continue;
 					}
-					
+
 					boolean isEndHeader = "".equals(currentLine);
 					if ( isEndHeader ) {
 						state = ParserStates.OnBody;
 					}
 
 					headerLine.append(currentLine);
-					
+
 					boolean existsHeader = headerLine.length() > 0;
 					if( existsHeader ) {
 						MIMEHeader header = headerParser.parseHeader(headerLine.toString());
 						headers.add(header);
 						headerLine = new StringBuilder();
 					}
-					
+
 					break;
-				
+
 				case OnBody:
 					boolean foundNextPart = delimiter.equals(currentLine);
-					boolean foundEndPart = 
-								currentLine.startsWith(delimiter) && 
-								currentLine.endsWith("--") && 
+					boolean foundEndPart =
+								currentLine.startsWith(delimiter) &&
+								currentLine.endsWith("--") &&
 								currentLine.length() == delimiter.length() + 2;
 					if ( foundNextPart || foundEndPart ) {
 						addNewBodyPart(headers, bodyParts, entityLines);
-						
-						headers = new ArrayList<MIMEHeader>();
+
+						headers = new ArrayList<>();
 						entityLines = new StringBuilder();
 						state = ParserStates.OnHeader;
-						
+
 						continue;
 					}
 
@@ -95,12 +95,12 @@ public class DefaultMultipartMessageParser implements MultipartMessageParser {
 					break;
 			}
 		}
-		
+
 		boolean reachEndWithoutEpilogueDelimiter = entityLines.length() > 1;
 		if ( reachEndWithoutEpilogueDelimiter ) {
 			addNewBodyPart(headers, bodyParts, entityLines);
 		}
-		
+
 		return new MultipartMessage(bodyParts);
 	}
 
