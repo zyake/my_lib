@@ -54,8 +54,14 @@ public class DefaultMultipartMessageParser implements MultipartMessageParser {
 
 				case OnHeader:
 					boolean isFolded = currentLine.startsWith(" ");
-					if ( isFolded ) {
-						headerLine.append(currentLine.trim());
+					if ( isFolded  ) {
+						headerLine.append(currentLine.substring(1));
+						continue;
+					}
+
+					boolean requireBuffering = headerLine.length() == 0 && currentLine.length() > 0;
+					if ( requireBuffering  ) {
+						headerLine.append(currentLine);
 						continue;
 					}
 
@@ -64,13 +70,12 @@ public class DefaultMultipartMessageParser implements MultipartMessageParser {
 						state = ParserStates.OnBody;
 					}
 
-					headerLine.append(currentLine);
-
-					boolean existsHeader = headerLine.length() > 0;
-					if( existsHeader ) {
+					boolean existsBufferedHeader = headerLine.length() > 0;
+					if ( existsBufferedHeader ) {
 						MIMEHeader header = headerParser.parseHeader(headerLine.toString());
 						headers.add(header);
 						headerLine = new StringBuilder();
+						headerLine.append(currentLine);
 					}
 
 					break;
