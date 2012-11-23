@@ -1,8 +1,8 @@
-package my.lib.net.mime.convert.acceptors;
+package my.lib.net.mime.ofm.acceptors;
 
 import my.lib.net.mime.BodyPart;
-import my.lib.net.mime.convert.AbstractEntityAcceptor;
-import my.lib.net.mime.convert.EntityAcceptor;
+import my.lib.net.mime.ofm.AbstractEntityAcceptor;
+import my.lib.net.mime.ofm.EntityAcceptor;
 
 public class AndAcceptor extends AbstractEntityAcceptor {
 

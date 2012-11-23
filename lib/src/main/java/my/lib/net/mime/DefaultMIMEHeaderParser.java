@@ -13,20 +13,20 @@ public class DefaultMIMEHeaderParser implements MIMEHeaderParser {
 		SearchParamName,
 		SearchParamBody
 	}
-	
+
 	public MIMEHeader parseHeader(String header) {
 		Assert.notNull(header, "header");
-		
+
 		ParseStates state = ParseStates.SearchFieldName;
 		StringBuilder fieldName = new StringBuilder();
 		StringBuilder fieldBody = new StringBuilder();
 		StringBuilder paramName = new StringBuilder();
 		StringBuilder paramBody = new StringBuilder();
 		List<MIMEParam> params = new ArrayList<MIMEParam>();
-		
+
 		for ( int i = 0 ; i < header.length() ; i ++ ) {
 			char currentChar = header.charAt(i);
-			
+
 			switch ( state ) {
 				case SearchFieldName:
 					boolean isEndName = ':' == currentChar;
@@ -36,16 +36,16 @@ public class DefaultMIMEHeaderParser implements MIMEHeaderParser {
 					}
 					fieldName.append(currentChar);
 				break;
-				
+
 				case SearchFieldBody:
-					boolean isEndBody = ';' == currentChar; 
+					boolean isEndBody = ';' == currentChar;
 					if ( isEndBody ) {
 						state = ParseStates.SearchParamName;
 						continue;
 					}
 					fieldBody.append(currentChar);
 					break;
-				
+
 				case SearchParamName:
 					boolean isEndParamName = '=' == currentChar;
 					if ( isEndParamName ) {
@@ -54,12 +54,12 @@ public class DefaultMIMEHeaderParser implements MIMEHeaderParser {
 					}
 					paramName.append(currentChar);
 					break;
-				
+
 				case SearchParamBody:
 					boolean isEndParamBody = ';' == currentChar;
 					if ( isEndParamBody ) {
 						addNewParam(paramName, paramBody, params);
-						
+
 						paramName = new StringBuilder();
 						paramBody = new StringBuilder();
 						state = ParseStates.SearchParamName;
@@ -69,10 +69,10 @@ public class DefaultMIMEHeaderParser implements MIMEHeaderParser {
 					break;
 			}
 		}
-		
+
 		String fieldNameText = fieldName.toString().trim();
 		String fieldBodyText = fieldBody.toString().trim();
-		
+
 		boolean fieldBodyNotFound = fieldBodyText.length() == 0;
 		if( fieldBodyNotFound ) {
 			throw new MIMEParserException("field body not found: header=" + header);
@@ -82,14 +82,14 @@ public class DefaultMIMEHeaderParser implements MIMEHeaderParser {
 		if ( existsLastParam ) {
 			addNewParam(paramName, paramBody, params);
 		}
-		
+
 		boolean paramBodyNotFound = paramName.length() > 0 && paramBody.length() == 0;
 		if( paramBodyNotFound ) {
 			throw new MIMEParserException("param body not found: header=" + header);
 		}
-		
+
 		MIMEHeader mimeHeader = new MIMEHeader(fieldNameText, fieldBodyText, params);
-		
+
 		return mimeHeader;
 	}
 
@@ -101,7 +101,7 @@ public class DefaultMIMEHeaderParser implements MIMEHeaderParser {
 		if ( paramBodyQuoted ) {
 			paramBodyText = paramBodyText.substring(1, paramBodyText.length() - 1);
 		}
-		
+
 		MIMEParam param = new MIMEParam(paramNameText, paramBodyText);
 		params.add(param);
 	}

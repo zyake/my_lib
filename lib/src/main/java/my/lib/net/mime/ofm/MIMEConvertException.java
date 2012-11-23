@@ -1,4 +1,4 @@
-package my.lib.net.mime.convert;
+package my.lib.net.mime.ofm;
 
 public class MIMEConvertException extends RuntimeException {
 

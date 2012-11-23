@@ -1,4 +1,4 @@
-package my.lib.net.mime.convert;
+package my.lib.net.mime.ofm;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import my.lib.net.mime.BodyPart;
 
 public interface EntityConverter {
 
-	Object convert(BodyPart bodyPart);
+	Object convertEntity(BodyPart bodyPart);
 	
 	boolean accept(BodyPart bodyPart);
 	

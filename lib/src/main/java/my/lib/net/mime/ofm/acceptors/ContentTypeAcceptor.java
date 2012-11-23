@@ -1,8 +1,8 @@
-package my.lib.net.mime.convert.acceptors;
+package my.lib.net.mime.ofm.acceptors;
 
 import my.lib.net.mime.BodyPart;
 import my.lib.net.mime.MIMEHeader;
-import my.lib.net.mime.convert.AbstractEntityAcceptor;
+import my.lib.net.mime.ofm.AbstractEntityAcceptor;
 
 public class ContentTypeAcceptor extends AbstractEntityAcceptor {
 
@@ -11,19 +11,19 @@ public class ContentTypeAcceptor extends AbstractEntityAcceptor {
 	public ContentTypeAcceptor(String contentType) {
 		this.contentType = contentType;
 	}
-	
+
 	@Override
 	public boolean accept(BodyPart bodyPart) {
 		for ( MIMEHeader header : bodyPart.getHeaders() ) {
-			boolean contentTypeMatched = 
-					"Content-Type".equals(header.getFieldName()) &&
+			boolean contentTypeMatched =
+					"content-type".equals(header.getFieldName().toLowerCase()) &&
 					contentType.equals(header.getFieldBody());
 
 			if( contentTypeMatched ) {
 				return true;
 			}
 		}
-		
+
 		return false;
 	}
 }

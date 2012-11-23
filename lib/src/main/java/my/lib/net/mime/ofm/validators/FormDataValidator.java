@@ -1,4 +1,4 @@
-package my.lib.net.mime.convert;
+package my.lib.net.mime.ofm.validators;
 
 import my.lib.net.mime.MultipartMessage;
 import my.lib.net.mime.MultipartMessageValidator;

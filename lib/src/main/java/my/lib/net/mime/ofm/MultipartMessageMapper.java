@@ -1,4 +1,4 @@
-package my.lib.net.mime.convert;
+package my.lib.net.mime.ofm;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import my.lib.net.mime.MultipartMessage;
 public interface MultipartMessageMapper {
 
 	void mapToObject(MultipartMessage msg, Object target);
-	
+
+	EntityInjector getInjector();
+
 	List<EntityConverter> getConverters();
-	
-	List<FieldMatcher> getMatchers();
 }

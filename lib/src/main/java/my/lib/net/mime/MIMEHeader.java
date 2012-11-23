@@ -1,30 +1,31 @@
 package my.lib.net.mime;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class MIMEHeader {
 
 	private String fieldName;
-	
+
 	private String fieldBody;
-	
-	private List<MIMEParam> params;
-	
+
+	private List<MIMEParam> params = new ArrayList<MIMEParam>();
+
 	public MIMEHeader(String fieldName, String fieldBody, List<MIMEParam> params) {
 		this.fieldName = fieldName;
 		this.fieldBody = fieldBody;
-		this.params = params;
+		this.params.addAll(params);
 	}
-	
+
 	public String getFieldName() {
 		return fieldName;
 	}
-	
+
 	public String getFieldBody() {
 		return fieldBody;
 	}
-	
+
 	public List<MIMEParam> getParams() {
 		return Collections.unmodifiableList(params);
 	}
