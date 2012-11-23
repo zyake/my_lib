@@ -3,7 +3,6 @@ package my.lib.net.mime.ofm.converters;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.List;
 
 import my.lib.net.mime.BodyPart;
 import my.lib.net.mime.ofm.AbstractEntityConverter;
@@ -14,8 +13,8 @@ public class ThreadSafeDateEntityConverter extends AbstractEntityConverter {
 
 	private ThreadLocal<DateFormat> format;
 
-		public ThreadSafeDateEntityConverter(List<EntityAcceptor> acceptors, final String formatText) {
-			super(acceptors);
+		public ThreadSafeDateEntityConverter(EntityAcceptor acceptor, final String formatText) {
+			super(acceptor);
 			this.format = new ThreadLocal<DateFormat>() {
 				@Override
 				protected DateFormat initialValue() {
