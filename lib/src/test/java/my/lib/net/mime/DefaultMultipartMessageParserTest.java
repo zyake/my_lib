@@ -2,6 +2,13 @@ package my.lib.net.mime;
 
 import static org.junit.Assert.*;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.nio.ByteBuffer;
+import java.nio.CharBuffer;
+import java.nio.channels.FileChannel;
+import java.nio.charset.Charset;
+
 import org.junit.Test;
 
 public class DefaultMultipartMessageParserTest {
@@ -182,6 +189,58 @@ public class DefaultMultipartMessageParserTest {
 			MIMEHeader header = bodyPart.getHeaders().get(1);
 			assertEquals("Host", header.getFieldName());
 			assertEquals("hogepiyo", header.getFieldBody());
+		}
+	}
+
+	/**
+	 * 実際にGoogle Chromeから送信したmultipart/form-data形式データバイト列を読み込む
+	 */
+	@Test
+	public void testParseMessage07() throws Exception {
+		File file = new File("src/test/java/my/lib/net/mime/multipart_message.bin");
+		FileInputStream inputStream = new FileInputStream(file);
+
+		ByteBuffer buffer = ByteBuffer.allocate((int) file.length());
+		FileChannel channel = inputStream.getChannel();
+		channel.read(buffer);
+		buffer.position(0);
+
+		Charset charset = Charset.forName("UTF-8");
+		CharBuffer charBuffer = charset.decode(buffer);
+		charBuffer.position(0);
+		String msg = charBuffer.toString();
+
+		DefaultMultipartMessageParser target = new DefaultMultipartMessageParser();
+		MultipartMessage multipartMessage = target.parseMessage(msg);
+
+		assertEquals(2, multipartMessage.getBodyParts().size());
+		{
+			BodyPart bodyPart = multipartMessage.getBodyParts().get(0);
+			assertEquals("日本語でおｋ？\r\nてすとほげほげ", bodyPart.getEntity());
+			assertEquals(1, bodyPart.getHeaders().size());
+
+			MIMEHeader header = bodyPart.getHeaders().get(0);
+			assertEquals("Content-Disposition", header.getFieldName());
+			assertEquals("form-data", header.getFieldBody());
+
+			assertEquals(1, header.getParams().size());
+			MIMEParam param = header.getParams().get(0);
+			assertEquals("name", param.getKey());
+			assertEquals("test1", param.getValue());
+		}
+		{
+			BodyPart bodyPart = multipartMessage.getBodyParts().get(1);
+			assertEquals("testdata\r\ntestdata", bodyPart.getEntity());
+			assertEquals(1, bodyPart.getHeaders().size());
+
+			MIMEHeader header = bodyPart.getHeaders().get(0);
+			assertEquals("Content-Disposition", header.getFieldName());
+			assertEquals("form-data", header.getFieldBody());
+
+			assertEquals(1, header.getParams().size());
+			MIMEParam param = header.getParams().get(0);
+			assertEquals("name", param.getKey());
+			assertEquals("test2", param.getValue());
 		}
 	}
 }
