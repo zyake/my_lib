@@ -1,94 +1,87 @@
 package my.lib.net.mime;
 
+import static java.util.Arrays.*;
+import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
+
+import java.util.ArrayList;
 
 import org.junit.Test;
 
 public class DefaultMIMEHeaderParserTest {
 
 	@Test
-	public void testParseHeader01() {
+	public void testParseHeader01_normal() {
 		MIMEHeaderParser target = new DefaultMIMEHeaderParser();
-		
+
 		MIMEHeader header = target.parseHeader("content-type: text/plain");
-		
-		assertEquals("content-type", header.getFieldName());
-		assertEquals("text/plain", header.getFieldBody());
-		assertEquals(0, header.getParams().size());
+
+		MIMEHeader expected = new MIMEHeader("content-type", "text/plain", new ArrayList<MIMEParam>());
+
+		assertThat(header.toString(), is(expected.toString()));
 	}
-	
+
 	@Test
-	public void testParseHeader02() {
+	public void testParseHeader02_normal_hasEndSemicoron() {
 		MIMEHeaderParser target = new DefaultMIMEHeaderParser();
-		
+
 		MIMEHeader header = target.parseHeader("content-type: text/plain;");
-		
-		assertEquals("content-type", header.getFieldName());
-		assertEquals("text/plain", header.getFieldBody());
-		assertEquals(0, header.getParams().size());
+
+		MIMEHeader expected = new MIMEHeader("content-type", "text/plain", new ArrayList<MIMEParam>());
+
+		assertThat(header.toString(), is(expected.toString()));
 	}
-	
+
 	@Test
-	public void testParseHeader03() {
+	public void testParseHeader03_normal_hasFieldBodySpaceAndSemicoron() {
 		MIMEHeaderParser target = new DefaultMIMEHeaderParser();
-		
+
 		MIMEHeader header = target.parseHeader("content-type: text/plain     ;");
-		
-		assertEquals("content-type", header.getFieldName());
-		assertEquals("text/plain", header.getFieldBody());
-		assertEquals(0, header.getParams().size());
+
+		MIMEHeader expected = new MIMEHeader("content-type", "text/plain", new ArrayList<MIMEParam>());
+
+		assertThat(header.toString(), is(expected.toString()));
 	}
-	
+
 	@Test
-	public void testParseHeader04() {
+	public void testParseHeader04_normal_hasOneParam() {
 		MIMEHeaderParser target = new DefaultMIMEHeaderParser();
-		
+
 		MIMEHeader header = target.parseHeader("content-type: text/plain;charset=windows-1250");
-		
-		assertEquals("content-type", header.getFieldName());
-		assertEquals("text/plain", header.getFieldBody());
-		assertEquals(1, header.getParams().size());
-		{
-			MIMEParam param = header.getParams().get(0);
-			assertEquals("charset", param.getKey());
-			assertEquals("windows-1250", param.getValue());
-		}
+
+		MIMEHeader expected = new MIMEHeader("content-type", "text/plain",
+				asList(new MIMEParam("charset", "windows-1250"))
+		);
+
+		assertThat(header.toString(), is(expected.toString()));
 	}
-	
+
 	@Test
-	public void testParseHeader05() {
+	public void testParseHeader05_normal_hasOneEscapedParam() {
 		MIMEHeaderParser target = new DefaultMIMEHeaderParser();
-		
+
 		MIMEHeader header = target.parseHeader("Content-Type: multipart/mixed; boundary=\"inner\"");
-		
-		assertEquals("Content-Type", header.getFieldName());
-		assertEquals("multipart/mixed", header.getFieldBody());
-		assertEquals(1, header.getParams().size());
-		{
-			MIMEParam param = header.getParams().get(0);
-			assertEquals("boundary", param.getKey());
-			assertEquals("inner", param.getValue());
-		}
+
+		MIMEHeader expected = new MIMEHeader("Content-Type", "multipart/mixed",
+				asList(new MIMEParam("boundary", "inner"))
+		);
+
+		assertThat(header.toString(), is(expected.toString()));
 	}
-	
+
 	@Test
-	public void testParseHeader06() {
+	public void testParseHeader06_hasMultipleParams() {
 		MIMEHeaderParser target = new DefaultMIMEHeaderParser();
-		
+
 		MIMEHeader header = target.parseHeader("Content-Type: multipart/mixed; boundary=\"inner\";charset=UTF-8");
-		
-		assertEquals("Content-Type", header.getFieldName());
-		assertEquals("multipart/mixed", header.getFieldBody());
-		assertEquals(2, header.getParams().size());
-		{
-			MIMEParam param = header.getParams().get(0);
-			assertEquals("boundary", param.getKey());
-			assertEquals("inner", param.getValue());
-		}
-		{
-			MIMEParam param = header.getParams().get(1);
-			assertEquals("charset", param.getKey());
-			assertEquals("UTF-8", param.getValue());
-		}
+
+		MIMEHeader expected = new MIMEHeader("Content-Type", "multipart/mixed",
+			asList(
+				new MIMEParam("boundary", "inner"),
+				new MIMEParam("charset", "UTF-8")
+			)
+		);
+
+		assertThat(header.toString(), is(expected.toString()));
 	}
 }

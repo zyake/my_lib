@@ -15,4 +15,9 @@ public class MultipartMessage {
 	public List<BodyPart> getBodyParts() {
 		return Collections.unmodifiableList(bodyParts);
 	}
+
+	@Override
+	public String toString() {
+		return bodyParts.toString();
+	}
 }

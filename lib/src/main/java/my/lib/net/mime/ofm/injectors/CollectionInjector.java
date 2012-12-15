@@ -7,7 +7,7 @@ import my.lib.net.mime.ofm.EntityInjector;
 import my.lib.net.mime.ofm.MIMEConvertException;
 
 /**
- * ボディーパートののエンティティをコレクションの最後尾に追加するインジェクタ。
+ * ボディーパートのエンティティをコレクションの最後尾に追加するインジェクタ。
  * @author zyake
  */
 public class CollectionInjector implements EntityInjector {

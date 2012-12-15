@@ -29,4 +29,12 @@ public class MIMEHeader {
 	public List<MIMEParam> getParams() {
 		return Collections.unmodifiableList(params);
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder()
+			.append("{name=" + fieldName + ", body=" + fieldBody + ", params=" + params.toString() + "}");
+
+		return builder.toString();
+	}
 }

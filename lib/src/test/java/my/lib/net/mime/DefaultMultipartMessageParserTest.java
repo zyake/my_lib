@@ -1,5 +1,7 @@
 package my.lib.net.mime;
 
+import static java.util.Arrays.*;
+import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
 import java.io.File;
@@ -8,83 +10,74 @@ import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.charset.Charset;
+import java.util.ArrayList;
 
 import org.junit.Test;
 
 public class DefaultMultipartMessageParserTest {
 
 	@Test
-	public void testParseMessage01() {
+	public void testParseMessage01_normal_hasSingleBodyPartWithHeader() {
 		String multipartMessage =
 				"--boundary42\r\n" +
 				"Content-Type: text/plain; charset=us-ascii\r\n" +
 				"\r\n" +
 				"... plain text version of message goes here ...\r\n" +
 				"--boundary42--";
-
 		DefaultMultipartMessageParser target = new DefaultMultipartMessageParser();
-
 		MultipartMessage parsedMessage = target.parseMessage(multipartMessage);
 
-		// start assertion
-		assertEquals(1, parsedMessage.getBodyParts().size());
+		MultipartMessage expected = new MultipartMessage(asList(
+			new BodyPart("... plain text version of message goes here ...",
+				asList(
+					new MIMEHeader("Content-Type", "text/plain", asList(new MIMEParam("charset", "us-ascii")))
+				)
+			)
+		));
 
-		BodyPart bodyPart = parsedMessage.getBodyParts().get(0);
-		assertEquals("... plain text version of message goes here ...", bodyPart.getEntity());
-		assertEquals(1, bodyPart.getHeaders().size());
-
-		MIMEHeader header = bodyPart.getHeaders().get(0);
-		assertEquals("Content-Type", header.getFieldName());
-		assertEquals("text/plain", header.getFieldBody());
-
-		assertEquals(1, header.getParams().size());
-		MIMEParam param = header.getParams().get(0);
-		assertEquals("charset", param.getKey());
-		assertEquals("us-ascii", param.getValue());
+		assertThat(parsedMessage.toString(), is(expected.toString()));
 	}
 
 	@Test
-	public void testParseMessage02() {
+	public void testParseMessage02_normal_hasSingleBodyPartWithoutHeader() {
 		String multipartMessage =
 				"--boundary42\r\n" +
 				"\r\n" +
 				"... plain text version of message goes here ...\r\n" +
 				"--boundary42--";
-
 		DefaultMultipartMessageParser target = new DefaultMultipartMessageParser();
-
 		MultipartMessage parsedMessage = target.parseMessage(multipartMessage);
 
-		// start assertion
-		assertEquals(1, parsedMessage.getBodyParts().size());
+		MultipartMessage expected = new MultipartMessage(
+			asList(
+				new BodyPart("... plain text version of message goes here ...", new ArrayList<MIMEHeader>())
+			)
+		);
 
-		BodyPart bodyPart = parsedMessage.getBodyParts().get(0);
-		assertEquals("... plain text version of message goes here ...", bodyPart.getEntity());
-		assertEquals(0, bodyPart.getHeaders().size());
+		assertThat(parsedMessage.toString(), is(expected.toString()));
 	}
 
 
 	@Test
-	public void testParseMessage03() {
+	public void testParseMessage03_normal_hasNoHeaderAndHasNoEndDelimiter() {
 		String multipartMessage =
 				"--boundary42\r\n" +
 				"\r\n" +
 				"... plain text version of message goes here ...\r\n";
-
 		DefaultMultipartMessageParser target = new DefaultMultipartMessageParser();
-
 		MultipartMessage parsedMessage = target.parseMessage(multipartMessage);
 
-		// start assertion
-		assertEquals(1, parsedMessage.getBodyParts().size());
+		MultipartMessage expected = new MultipartMessage(
+			asList(
+				new BodyPart("... plain text version of message goes here ...", new ArrayList<MIMEHeader>())
+			)
+		);
 
-		BodyPart bodyPart = parsedMessage.getBodyParts().get(0);
-		assertEquals("... plain text version of message goes here ...", bodyPart.getEntity());
-		assertEquals(0, bodyPart.getHeaders().size());
+		assertThat(parsedMessage.toString(), is(expected.toString()));
 	}
 
 	@Test
-	public void testParseMessage04() {
+	public void testParseMessage04_normal_hasMultipleBodys() {
 		String multipartMessage =
 				"--boundary42\r\n" +
 				"\r\n" +
@@ -97,66 +90,47 @@ public class DefaultMultipartMessageParserTest {
 				"    goes here ...\r\n" +
 				"\r\n" +
 				"--boundary42--";
-
 		DefaultMultipartMessageParser target = new DefaultMultipartMessageParser();
-
 		MultipartMessage parsedMessage = target.parseMessage(multipartMessage);
 
-		// start assertion
-		assertEquals(2, parsedMessage.getBodyParts().size());
+		MultipartMessage expected = new MultipartMessage(
+			asList(
+				new BodyPart("... plain text version of message goes here ...\r\n", new ArrayList<MIMEHeader>()),
+				new BodyPart("... RFC 1896 text/enriched version of same message\r\n    goes here ...\r\n",
+					asList(
+						new MIMEHeader("Content-Type", "text/enriched", new ArrayList<MIMEParam>())
+					)
+				)
+			)
+		);
 
-		{
-			BodyPart bodyPart = parsedMessage.getBodyParts().get(0);
-			assertEquals("... plain text version of message goes here ...\r\n", bodyPart.getEntity());
-			assertEquals(0, bodyPart.getHeaders().size());
-		}
-		{
-			BodyPart bodyPart = parsedMessage.getBodyParts().get(1);
-			assertEquals(
-					"... RFC 1896 text/enriched version of same message\r\n    goes here ...\r\n",
-					bodyPart.getEntity());
-			assertEquals(1, bodyPart.getHeaders().size());
-
-			MIMEHeader header = bodyPart.getHeaders().get(0);
-			assertEquals("Content-Type", header.getFieldName());
-			assertEquals("text/enriched", header.getFieldBody());
-
-			assertEquals(0, header.getParams().size());
-		}
+		assertThat(parsedMessage.toString(), is(expected.toString()));
 	}
 
 	@Test
-	public void testParseMessage05() {
+	public void testParseMessage05_normal_hasHeaderWithParam() {
 		String multipartMessage =
 				"--boundary42\r\n" +
 				"Content-Type: text/plain; \r\n charset=us-ascii\r\n" +
 				"\r\n" +
 				"... plain text version of message goes here ...\r\n" +
 				"--boundary42--";
-
 		DefaultMultipartMessageParser target = new DefaultMultipartMessageParser();
-
 		MultipartMessage parsedMessage = target.parseMessage(multipartMessage);
 
-		// start assertion
-		assertEquals(1, parsedMessage.getBodyParts().size());
+		MultipartMessage expected = new MultipartMessage(asList(
+				new BodyPart("... plain text version of message goes here ...",
+					asList(
+						new MIMEHeader("Content-Type", "text/plain", asList(new MIMEParam("charset", "us-ascii")))
+					)
+				)
+		));
 
-		BodyPart bodyPart = parsedMessage.getBodyParts().get(0);
-		assertEquals("... plain text version of message goes here ...", bodyPart.getEntity());
-		assertEquals(1, bodyPart.getHeaders().size());
-
-		MIMEHeader header = bodyPart.getHeaders().get(0);
-		assertEquals("Content-Type", header.getFieldName());
-		assertEquals("text/plain", header.getFieldBody());
-
-		assertEquals(1, header.getParams().size());
-		MIMEParam param = header.getParams().get(0);
-		assertEquals("charset", param.getKey());
-		assertEquals("us-ascii", param.getValue());
+		assertThat(parsedMessage.toString(), is(expected.toString()));
 	}
 
 	@Test
-	public void testParseMessage06() {
+	public void testParseMessage06_normal_hasMultipleHeader() {
 		String multipartMessage =
 				"--boundary42\r\n" +
 				"Content-Type: text/plain; \r\n charset=us-ascii\r\n" +
