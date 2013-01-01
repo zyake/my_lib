@@ -1,19 +1,23 @@
 package my.lib.net.mime.ofm;
 
-import java.util.Collections;
-import java.util.List;
-
 import my.lib.common.Assert;
 import my.lib.net.mime.BodyPart;
 import my.lib.net.mime.MultipartMessage;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class DefaultMultipartMessageMapper implements MultipartMessageMapper {
+
+    private static Logger LOG = Logger.getLogger(DefaultMultipartMessageMapper.class.getName());
 
 	private List<EntityConverter> converters;
 
 	private EntityInjector injector;
 
-	protected DefaultMultipartMessageMapper(List<EntityConverter> converters, EntityInjector injector) {
+	public DefaultMultipartMessageMapper(List<EntityConverter> converters, EntityInjector injector) {
 		this.converters = converters;
 		this.injector = injector;
 	}
@@ -36,12 +40,16 @@ public class DefaultMultipartMessageMapper implements MultipartMessageMapper {
 
 			boolean converterNotFound = matchedConvereter == null;
 			if ( converterNotFound ) {
-				throw new MIMEConvertException("matched converter not found: " + msg);
+				throw new MIMEConvertException("matched converter not found: message=" + bodyPart);
 			}
 
 			Object convertedEntity = matchedConvereter.convertEntity(bodyPart);
 			injector.inject(bodyPart, convertedEntity, target);
 		}
+
+        if ( LOG.isLoggable(Level.INFO) ) {
+            LOG.info("object injection successed: " + target);
+        }
 	}
 
 	public List<EntityConverter> getConverters() {
