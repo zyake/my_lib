@@ -1,9 +1,7 @@
-package my.lib.net.mime.ofm;
+package my.lib.net.mime.ofm.acceptors;
 
 import my.lib.net.mime.BodyPart;
-import my.lib.net.mime.ofm.acceptors.AndAcceptor;
-import my.lib.net.mime.ofm.acceptors.OrAcceptor;
-import my.lib.net.mime.ofm.acceptors.XOrAcceptor;
+import my.lib.net.mime.ofm.EntityAcceptor;
 
 public abstract class AbstractEntityAcceptor implements EntityAcceptor {
 

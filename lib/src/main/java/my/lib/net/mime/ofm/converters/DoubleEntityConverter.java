@@ -1,14 +1,9 @@
 package my.lib.net.mime.ofm.converters;
 
 import my.lib.net.mime.BodyPart;
-import my.lib.net.mime.ofm.AbstractEntityConverter;
-import my.lib.net.mime.ofm.EntityAcceptor;
+import my.lib.net.mime.ofm.EntityConverter;
 
-public class DoubleEntityConverter extends AbstractEntityConverter {
-
-		public DoubleEntityConverter(EntityAcceptor acceptor) {
-			super(acceptor);
-		}
+public class DoubleEntityConverter implements EntityConverter {
 
 		@Override
 		public Object convertEntity(BodyPart bodyPart) {

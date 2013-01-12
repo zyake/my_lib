@@ -1,7 +1,6 @@
 package my.lib.net.mime.ofm.acceptors;
 
 import my.lib.net.mime.BodyPart;
-import my.lib.net.mime.ofm.AbstractEntityAcceptor;
 import my.lib.net.mime.ofm.EntityAcceptor;
 
 public class NotAcceptor extends AbstractEntityAcceptor {

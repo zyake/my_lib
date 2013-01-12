@@ -1,4 +1,6 @@
-package my.lib.net.mime;
+package my.lib.net.mime.ofm;
+
+import my.lib.net.mime.MultipartMessage;
 
 public interface MultipartMessageValidator {
 

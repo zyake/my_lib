@@ -10,5 +10,5 @@ public interface MultipartMessageMapper {
 
 	EntityInjector getInjector();
 
-	List<EntityConverter> getConverters();
+	List<ConverterHolder> getHolders();
 }

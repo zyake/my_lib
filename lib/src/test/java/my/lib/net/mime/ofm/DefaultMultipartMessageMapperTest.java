@@ -10,11 +10,9 @@ import my.lib.net.mime.BodyPart;
 import my.lib.net.mime.MIMEHeader;
 import my.lib.net.mime.MIMEParam;
 import my.lib.net.mime.MultipartMessage;
-import my.lib.net.mime.ofm.acceptors.FormDataNameAcceptor;
-import my.lib.net.mime.ofm.converters.TextEntityConverter;
-import my.lib.net.mime.ofm.converters.ThreadSafeDateEntityConverter;
-import my.lib.net.mime.ofm.injectors.FormDataFieldInjector;
 
+import my.lib.net.mime.ofm.Injectors;
+import my.lib.net.mime.ofm.MapperBuilder;
 import org.junit.Test;
 
 public class DefaultMultipartMessageMapperTest {
@@ -31,17 +29,12 @@ public class DefaultMultipartMessageMapperTest {
 	@Test
 	public void testMapToObject01() {
 		// initialize
-		List<EntityConverter> converters = new ArrayList<>();
-		{
-			EntityAcceptor acceptor = new FormDataNameAcceptor("name").or(new FormDataNameAcceptor("address"));
-			converters.add(new TextEntityConverter(acceptor));
-		}
-		{
-			converters.add(new ThreadSafeDateEntityConverter(
-					new FormDataNameAcceptor("birthday"), "yyyyMMdd"));
-		}
-		DefaultMultipartMessageMapper target = new DefaultMultipartMessageMapper(
-				converters, new FormDataFieldInjector());
+        MultipartMessageMapper target = new MapperBuilder()
+                .addHolder(Converters.Text, "name")
+                .addHolder(Converters.Text, "address")
+                .addDateHolder("birthday", "yyyyMMdd")
+                .setInjector(Injectors.FIELD)
+                .build();
 
 		// test
 		List<BodyPart> bodyParts = new ArrayList<>();

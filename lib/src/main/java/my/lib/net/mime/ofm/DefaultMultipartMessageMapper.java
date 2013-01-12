@@ -6,19 +6,18 @@ import my.lib.net.mime.MultipartMessage;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class DefaultMultipartMessageMapper implements MultipartMessageMapper {
 
     private static Logger LOG = Logger.getLogger(DefaultMultipartMessageMapper.class.getName());
 
-	private List<EntityConverter> converters;
+	private List<ConverterHolder> holders;
 
 	private EntityInjector injector;
 
-	public DefaultMultipartMessageMapper(List<EntityConverter> converters, EntityInjector injector) {
-		this.converters = converters;
+	public DefaultMultipartMessageMapper(List<ConverterHolder> holders, EntityInjector injector) {
+		this.holders = Collections.unmodifiableList(holders);
 		this.injector = injector;
 	}
 
@@ -28,13 +27,15 @@ public class DefaultMultipartMessageMapper implements MultipartMessageMapper {
 
 		for ( BodyPart bodyPart : msg.getBodyParts() ) {
 			EntityConverter matchedConvereter = null;
-			for ( EntityConverter convereter : converters ) {
-				boolean accepted = convereter.accept(bodyPart);
+			for ( ConverterHolder holder : holders ) {
+                EntityConverter converter = holder.getConverter();
+                EntityAcceptor acceptor = holder.getAcceptor();
+                boolean accepted = acceptor.accept(bodyPart);
 				if ( !accepted ) {
 					continue;
 				}
 
-				matchedConvereter = convereter;
+				matchedConvereter = converter;
 				break;
 			}
 
@@ -46,14 +47,10 @@ public class DefaultMultipartMessageMapper implements MultipartMessageMapper {
 			Object convertedEntity = matchedConvereter.convertEntity(bodyPart);
 			injector.inject(bodyPart, convertedEntity, target);
 		}
-
-        if ( LOG.isLoggable(Level.INFO) ) {
-            LOG.info("object injection successed: " + target);
-        }
 	}
 
-	public List<EntityConverter> getConverters() {
-		return Collections.unmodifiableList(converters);
+	public List<ConverterHolder> getHolders() {
+        return holders;
 	}
 
 	public EntityInjector getInjector() {
