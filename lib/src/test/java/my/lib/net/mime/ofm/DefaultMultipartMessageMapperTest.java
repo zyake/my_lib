@@ -1,5 +1,6 @@
 package my.lib.net.mime.ofm;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
@@ -11,8 +12,6 @@ import my.lib.net.mime.MIMEHeader;
 import my.lib.net.mime.MIMEParam;
 import my.lib.net.mime.MultipartMessage;
 
-import my.lib.net.mime.ofm.Injectors;
-import my.lib.net.mime.ofm.MapperBuilder;
 import org.junit.Test;
 
 public class DefaultMultipartMessageMapperTest {
@@ -24,14 +23,19 @@ public class DefaultMultipartMessageMapperTest {
 		private String address;
 
 		private Date birthday;
-	}
+
+        @Override
+        public String toString() {
+            return "name=" + name + ", address=" + address + ", birthday=" + birthday;
+        }
+    }
 
 	@Test
 	public void testMapToObject01() {
 		// initialize
         MultipartMessageMapper target = new MapperBuilder()
-                .addHolder(Converters.Text, "name")
-                .addHolder(Converters.Text, "address")
+                .addHolder(Converters.TEXT, "name")
+                .addHolder(Converters.TEXT, "address")
                 .addDateHolder("birthday", "yyyyMMdd")
                 .setInjector(Injectors.FIELD)
                 .build();
@@ -70,9 +74,7 @@ public class DefaultMultipartMessageMapperTest {
 		target.mapToObject(multipartMessage, myForm);
 
 		// assert
-		assertEquals("name1", myForm.name);
-		assertEquals("address1", myForm.address);
-		assertEquals("Thu Feb 05 00:00:00 JST 1987", myForm.birthday.toString());
+        assertThat(myForm.toString(), is("name=name1, address=address1, birthday=Thu Feb 05 00:00:00 JST 1987"));
 	}
 
 }

@@ -7,9 +7,9 @@ import my.lib.net.mime.ofm.converters.TextEntityConverter;
 
 public enum Converters {
 
-    Double(new DoubleEntityConverter()),
-    Text(new TextEntityConverter()),
-    Integer(new IntegerEntityConvereter());
+    DOUBLE(new DoubleEntityConverter()),
+    TEXT(new TextEntityConverter()),
+    INTEGER(new IntegerEntityConvereter());
 
     EntityConverter converter;
 
