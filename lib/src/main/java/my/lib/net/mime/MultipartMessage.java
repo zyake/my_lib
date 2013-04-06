@@ -6,7 +6,7 @@ import java.util.List;
 
 public class MultipartMessage {
 
-	private List<BodyPart> bodyParts = new ArrayList<>();
+	private List<BodyPart> bodyParts = new ArrayList<BodyPart>();
 
 	public MultipartMessage(List<BodyPart> bodyParts) {
 		this.bodyParts .addAll(bodyParts);

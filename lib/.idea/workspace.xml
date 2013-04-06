@@ -1,17 +1,209 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d8bb0375-4be5-4159-8483-801c3e5d3de2" name="Default" comment="" />
+    <list default="true" id="d8bb0375-4be5-4159-8483-801c3e5d3de2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/my/lib/data/jdbc/it/JdbcDataMapperIT.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/my/lib/data/jdbc/it/TransactionManagementIT.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/my/lib/data/jdbc/it/jdbc-datamapper_failure.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/my/lib/data/jdbc/it/jdbc-datamapper_success.xml" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\ArraysUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\CollectionUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\Predicate.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\common\Assert.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\common\ClassUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\common\CommonException.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\DataAccessException.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\DataMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\DataMapperFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\ConnectionManager.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\DataSourceConnectionManager$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\DataSourceConnectionManager.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\EntityRowMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\JdbcConnectionFactory$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\JdbcConnectionFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\JdbcDataMapper$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\JdbcDataMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\JdbcDataMapperFactory$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\JdbcDataMapperFactory$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\JdbcDataMapperFactory$MappingStrategy.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\JdbcDataMapperFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\JdbcTrnResource.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\NamedParameterSqlExpression.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\RowMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\SetterResolver.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\SqlExpression.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\TrnConnectionManager.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\UnderScoreSetterResolver$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\UnderScoreSetterResolver.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\config\JdbcDataMapperConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\config\JdbcDataMapperConfigParser.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\config\NamedParameterSqlExpressionParser$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\config\NamedParameterSqlExpressionParser$ParsedExpression.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\config\NamedParameterSqlExpressionParser$Positions.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\config\NamedParameterSqlExpressionParser.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\config\SaxJdbcDataMapperConfigParser$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\config\SaxJdbcDataMapperConfigParser$InternalHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\config\SaxJdbcDataMapperConfigParser$Positions.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\config\SaxJdbcDataMapperConfigParser.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\config\SqlConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\jdbc\config\SqlExpressionParser.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\resource\AbstractUrlResourceDataMapperFactory$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\resource\AbstractUrlResourceDataMapperFactory$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\resource\AbstractUrlResourceDataMapperFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\resource\ResourceGateway.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\resource\ResourceParser.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\resource\UrlResourceDataMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\resource\UrlResourceGateway.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\trn\DefaultTrnExecutor$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\trn\DefaultTrnExecutor.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\trn\TrnAction.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\trn\TrnDataAccessException.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\trn\TrnExecutor.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\trn\TrnResource.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\trn\TrnResourceFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\trn\TrnResourceRegistry$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\data\trn\TrnResourceRegistry.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\BodyPart.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\DefaultMIMEHeaderParser$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\DefaultMIMEHeaderParser$ParseStates.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\DefaultMIMEHeaderParser.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\DefaultMultipartMessageParser$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\DefaultMultipartMessageParser$ParserStates.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\DefaultMultipartMessageParser.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\MIMEHeader.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\MIMEHeaderParser.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\MIMEParam.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\MIMEParserException.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\MIMEUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\MultipartMessage.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\MultipartMessageParser.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\ConverterHolder.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\Converters.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\DefaultMultipartMessageMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\EntityAcceptor.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\EntityConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\EntityInjector.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\Injectors.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\MIMEConvertException.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\MapperBuilder.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\MultipartMessageMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\MultipartMessageValidator.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\acceptors\AbstractEntityAcceptor.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\acceptors\AllAcceptor.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\acceptors\AndAcceptor.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\acceptors\ContentTypeAcceptor.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\acceptors\FormDataNameAcceptor.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\acceptors\NotAcceptor.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\acceptors\OrAcceptor.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\acceptors\XOrAcceptor.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\converters\DateEntityConverter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\converters\DateEntityConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\converters\DoubleEntityConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\converters\IntegerEntityConvereter.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\converters\TextEntityConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\injectors\CollectionInjector.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\injectors\FormDataFieldInjector.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\net\mime\ofm\validators\FormDataValidator.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\ArraysUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\Assert.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\ClassUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\CollectionUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\CommonException.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\DataSourceUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\ExceptionHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\FileUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\JsonUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\LoggerUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\Predicate.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\PropertiesUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\ResourceUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\RowHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\SaxUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\StringUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\UtilException.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\data\DataSourceUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\data\DataUtilException.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\data\RowHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\io\FileUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\io\IOUtilException.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\io\PropertiesUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\io\ResourceUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\xml\JsonUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\xml\SaxUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\classes\my\lib\util\xml\XmlUtilException.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\lib-0.0.1-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\maven-archiver\pom.properties" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\TEST-my.lib.data.jdbc.DataSourceConnectionManagerTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\TEST-my.lib.data.jdbc.EntityRowMapperTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\TEST-my.lib.data.jdbc.JdbcDataMapperFactoryTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\TEST-my.lib.data.jdbc.JdbcDataMapperTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\TEST-my.lib.data.jdbc.UnderScoreSetterResolverTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\TEST-my.lib.data.jdbc.config.NamedParameterSqlExpressionParserTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\TEST-my.lib.data.jdbc.config.SaxJdbcDataMapperConfigParserTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\TEST-my.lib.net.mime.DefaultMIMEHeaderParserTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\TEST-my.lib.net.mime.DefaultMultipartMessageParserTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\TEST-my.lib.net.mime.MIMEUtilTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\TEST-my.lib.net.mime.ofm.DefaultMultipartMessageMapperTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\TEST-my.lib.net.mime.ofm.injectors.FormDataFieldInjectorTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\my.lib.data.jdbc.DataSourceConnectionManagerTest.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\my.lib.data.jdbc.EntityRowMapperTest.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\my.lib.data.jdbc.JdbcDataMapperFactoryTest.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\my.lib.data.jdbc.JdbcDataMapperTest.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\my.lib.data.jdbc.UnderScoreSetterResolverTest.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\my.lib.data.jdbc.config.NamedParameterSqlExpressionParserTest.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\my.lib.data.jdbc.config.SaxJdbcDataMapperConfigParserTest.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\my.lib.net.mime.DefaultMIMEHeaderParserTest.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\my.lib.net.mime.DefaultMultipartMessageParserTest.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\my.lib.net.mime.MIMEUtilTest.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\my.lib.net.mime.ofm.DefaultMultipartMessageMapperTest.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\surefire-reports\my.lib.net.mime.ofm.injectors.FormDataFieldInjectorTest.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\ContainsMatcher.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\PatternMatcher.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\ProcessResult.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\TestResourceUtil$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\TestResourceUtil$StreamReadingTask.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\TestResourceUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\data\jdbc\CategoryConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\data\jdbc\DataSourceConnectionManagerTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\data\jdbc\EntityRowMapperTest$Employee.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\data\jdbc\EntityRowMapperTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\data\jdbc\JdbcDataMapperFactoryTest$CategoryConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\data\jdbc\JdbcDataMapperFactoryTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\data\jdbc\JdbcDataMapperTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\data\jdbc\TestDataSourceUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\data\jdbc\UnderScoreSetterResolverTest$Stub.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\data\jdbc\UnderScoreSetterResolverTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\data\jdbc\config\NamedParameterSqlExpressionParserTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\data\jdbc\config\SaxJdbcDataMapperConfigParserTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\net\mime\DefaultMIMEHeaderParserTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\net\mime\DefaultMultipartMessageParserTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\net\mime\MIMEUtilTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\net\mime\ofm\DefaultMultipartMessageMapperTest$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\net\mime\ofm\DefaultMultipartMessageMapperTest$MyForm.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\net\mime\ofm\DefaultMultipartMessageMapperTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\net\mime\ofm\injectors\FormDataFieldInjectorTest$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\net\mime\ofm\injectors\FormDataFieldInjectorTest$MyForm.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\my_lib\lib\target\test-classes\my\lib\net\mime\ofm\injectors\FormDataFieldInjectorTest.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/my/lib/net/mime/BodyPart.java" afterPath="$PROJECT_DIR$/src/main/java/my/lib/net/mime/BodyPart.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/my/lib/net/mime/DefaultMIMEHeaderParser.java" afterPath="$PROJECT_DIR$/src/main/java/my/lib/net/mime/DefaultMIMEHeaderParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/my/lib/net/mime/ofm/DefaultMultipartMessageMapperTest.java" afterPath="$PROJECT_DIR$/src/test/java/my/lib/net/mime/ofm/DefaultMultipartMessageMapperTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/my/lib/net/mime/DefaultMultipartMessageParser.java" afterPath="$PROJECT_DIR$/src/main/java/my/lib/net/mime/DefaultMultipartMessageParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/my/lib/net/mime/ofm/injectors/FormDataFieldInjectorTest.java" afterPath="$PROJECT_DIR$/src/test/java/my/lib/net/mime/ofm/injectors/FormDataFieldInjectorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/my/lib/net/mime/MIMEHeader.java" afterPath="$PROJECT_DIR$/src/main/java/my/lib/net/mime/MIMEHeader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/my/lib/net/mime/ofm/MapperBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/my/lib/net/mime/ofm/MapperBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/my/lib/net/mime/MultipartMessage.java" afterPath="$PROJECT_DIR$/src/main/java/my/lib/net/mime/MultipartMessage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="lib.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/pom.xml" changelist="d8bb0375-4be5-4159-8483-801c3e5d3de2" time="1365219797419" ignored="false" />
     <file path="$PROJECT_DIR$/../../BookRepository/BookRepository/pom.xml" changelist="d8bb0375-4be5-4159-8483-801c3e5d3de2" time="1358068679817" ignored="false" />
-    <file path="/Dummy.txt" changelist="d8bb0375-4be5-4159-8483-801c3e5d3de2" time="1358068834967" ignored="false" />
-    <file path="/fragment.java" changelist="d8bb0375-4be5-4159-8483-801c3e5d3de2" time="1365220574038" ignored="false" />
+    <file path="/Dummy.txt" changelist="d8bb0375-4be5-4159-8483-801c3e5d3de2" time="1365224662387" ignored="false" />
+    <file path="/fragment.java" changelist="d8bb0375-4be5-4159-8483-801c3e5d3de2" time="1365225112037" ignored="false" />
     <file path="$PROJECT_DIR$/../../BookRepository/BookRepository/src/test/java/my/app/bookrepository/servlet/ExceptionHandlerTest.java" changelist="d8bb0375-4be5-4159-8483-801c3e5d3de2" time="1358069254434" ignored="false" />
     <file path="/ExceptionHandlerTest.java" changelist="d8bb0375-4be5-4159-8483-801c3e5d3de2" time="1358069241733" ignored="false" />
     <file path="$PROJECT_DIR$/../../BookRepository/BookRepository/src/test/java/my/app/bookrepository/servlet/SelectionServletTest.java" changelist="d8bb0375-4be5-4159-8483-801c3e5d3de2" time="1358069259677" ignored="false" />
-    <file path="$PROJECT_DIR$/../../PhraseSearchReporter/PhraseSearcher/.idea/workspace.xml" changelist="d8bb0375-4be5-4159-8483-801c3e5d3de2" time="1365224647287" ignored="false" />
+    <file path="$PROJECT_DIR$/../../PhraseSearchReporter/PhraseSearcher/.idea/workspace.xml" changelist="d8bb0375-4be5-4159-8483-801c3e5d3de2" time="1365225623984" ignored="false" />
     <file path="/PropertiesUtil.java" changelist="d8bb0375-4be5-4159-8483-801c3e5d3de2" time="1365217583096" ignored="false" />
     <file path="/ClassUtil.java" changelist="d8bb0375-4be5-4159-8483-801c3e5d3de2" time="1365217451249" ignored="false" />
     <file path="/IoUtilException.java" changelist="d8bb0375-4be5-4159-8483-801c3e5d3de2" time="1365217554233" ignored="false" />
@@ -44,6 +236,7 @@
     <file path="/PatternMatcher.java" changelist="d8bb0375-4be5-4159-8483-801c3e5d3de2" time="1365223936852" ignored="false" />
     <file path="/JdbcDataMapperFactoryTest.java" changelist="d8bb0375-4be5-4159-8483-801c3e5d3de2" time="1365221798454" ignored="false" />
     <file path="/ContainsMatcher.java" changelist="d8bb0375-4be5-4159-8483-801c3e5d3de2" time="1365223940070" ignored="false" />
+    <file path="/MIMEHeader.java" changelist="d8bb0375-4be5-4159-8483-801c3e5d3de2" time="1365225493424" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,104 +295,130 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DataSourceConnectionManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/my/lib/data/jdbc/DataSourceConnectionManager.java">
+      <file leaf-file-name="TransactionManagementIT.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/my/lib/data/jdbc/it/TransactionManagementIT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="43" selection-start="2398" selection-end="2398" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JdbcDataMapperFactoryTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/my/lib/data/jdbc/JdbcDataMapperFactoryTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="87" selection-start="3456" selection-end="3456" vertical-scroll-proportion="0.0">
+            <state line="81" column="49" selection-start="3303" selection-end="3303" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2430#2449#0" expanded="true" />
-                <element signature="e#5662#5681#0" expanded="true" />
+                <element signature="e#2400#2880#0" expanded="true" />
+                <element signature="e#2869#2870#0" expanded="true" />
+                <element signature="e#2919#3404#0" expanded="true" />
+                <element signature="e#3393#3394#0" expanded="true" />
+                <element signature="e#4818#5298#0" expanded="true" />
+                <element signature="e#5287#5288#0" expanded="true" />
+                <element signature="e#5337#6189#0" expanded="true" />
+                <element signature="e#6178#6179#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UnderScoreSetterResolverTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/my/lib/data/jdbc/UnderScoreSetterResolverTest.java">
+      <file leaf-file-name="DefaultMultipartMessageMapperTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/my/lib/net/mime/ofm/DefaultMultipartMessageMapperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="44" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="29" selection-start="938" selection-end="938" vertical-scroll-proportion="1.2291666">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JdbcDataMapperFactory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/my/lib/data/jdbc/JdbcDataMapperFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="23" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
+            <state line="63" column="63" selection-start="1844" selection-end="1844" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1066#1076#0" expanded="true" />
+                <element signature="e#1125#1136#0" expanded="true" />
+                <element signature="e#1229#1241#0" expanded="true" />
+                <element signature="e#1422#1433#0" expanded="true" />
+                <element signature="e#1529#1541#0" expanded="true" />
+                <element signature="e#1725#1736#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NamedParameterSqlExpressionParserTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/my/lib/data/jdbc/config/NamedParameterSqlExpressionParserTest.java">
+      <file leaf-file-name="MIMEHeader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/my/lib/net/mime/MIMEHeader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="7" selection-start="4250" selection-end="4250" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SaxJdbcDataMapperConfigParserTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/my/lib/data/jdbc/config/SaxJdbcDataMapperConfigParserTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="93" selection-start="1520" selection-end="1520" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestResourceUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/my/lib/TestResourceUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="14" selection-start="2658" selection-end="2658" vertical-scroll-proportion="0.0">
+            <state line="12" column="54" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContainsMatcher.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/my/lib/ContainsMatcher.java">
+      <file leaf-file-name="DefaultMIMEHeaderParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/my/lib/net/mime/DefaultMIMEHeaderParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="53" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0">
+            <state line="24" column="56" selection-start="663" selection-end="663" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapperBuilder.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/my/lib/net/mime/ofm/MapperBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="57" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#288#305#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JdbcDataMapperTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/my/lib/data/jdbc/JdbcDataMapperTest.java">
+      <file leaf-file-name="BodyPart.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/my/lib/net/mime/BodyPart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="8" column="52" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#182#194#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MultipartMessage.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/my/lib/net/mime/MultipartMessage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="52" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#190#200#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultMultipartMessageParser.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/my/lib/net/mime/DefaultMultipartMessageParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="91" column="58" selection-start="2549" selection-end="2549" vertical-scroll-proportion="0.33333334">
+              <folding>
+                <element signature="e#689#701#0" expanded="true" />
+                <element signature="e#798#808#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FormDataFieldInjectorTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/my/lib/net/mime/ofm/injectors/FormDataFieldInjectorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="119" column="0" selection-start="2921" selection-end="2921" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#593#604#0" expanded="true" />
+                <element signature="e#716#728#0" expanded="true" />
+                <element signature="e#1271#1282#0" expanded="true" />
+                <element signature="e#1394#1406#0" expanded="true" />
+                <element signature="e#1894#1905#0" expanded="true" />
+                <element signature="e#2017#2029#0" expanded="true" />
+                <element signature="e#2475#2486#0" expanded="true" />
+                <element signature="e#2598#2610#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JdbcDataMapperIT.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/my/lib/data/jdbc/it/JdbcDataMapperIT.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="83" column="20" selection-start="3228" selection-end="3228" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3144#3160#0" expanded="true" />
+                <element signature="e#4298#4314#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -211,30 +430,40 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="GitLogSettings">
     <option name="myDateState">
       <MyDateState />
     </option>
   </component>
+  <component name="GradleLocalSettings">
+    <option name="expandStates">
+      <map>
+        <entry key="lib" value="true" />
+      </map>
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/my/lib/data/jdbc/DataSourceConnectionManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/lib/data/jdbc/JdbcDataMapperFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/lib/data/jdbc/config/SaxJdbcDataMapperConfigParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/lib/data/jdbc/config/SqlExpressionParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/lib/data/jdbc/TrnConnectionManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/lib/data/jdbc/ConnectionManager.java" />
-        <option value="$PROJECT_DIR$/src/test/java/my/lib/data/jdbc/config/NamedParameterSqlExpressionParserTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/my/lib/data/jdbc/TestDataSourceUtil.java" />
-        <option value="$PROJECT_DIR$/src/test/java/my/lib/ProcessResult.java" />
-        <option value="$PROJECT_DIR$/src/test/java/my/lib/data/jdbc/config/SaxJdbcDataMapperConfigParserTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/my/lib/TestResourceUtil.java" />
         <option value="$PROJECT_DIR$/src/test/java/my/lib/PatternMatcher.java" />
         <option value="$PROJECT_DIR$/src/test/java/my/lib/ContainsMatcher.java" />
         <option value="$PROJECT_DIR$/src/test/java/my/lib/data/jdbc/JdbcDataMapperFactoryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/my/lib/data/jdbc/UnderScoreSetterResolverTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/my/lib/it/TransactionManagementIT.java" />
+        <option value="$PROJECT_DIR$/src/test/java/my/lib/it/JdbcDataMapperIT.java" />
+        <option value="$PROJECT_DIR$/src/test/java/my/lib/data/jdbc/it/JdbcDataMapperIT.java" />
+        <option value="$PROJECT_DIR$/src/test/java/my/lib/net/mime/ofm/injectors/FormDataFieldInjectorTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/my/lib/net/mime/ofm/DefaultMultipartMessageMapperTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/lib/net/mime/MIMEHeader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/lib/net/mime/DefaultMIMEHeaderParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/lib/net/mime/ofm/MapperBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/lib/net/mime/BodyPart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/lib/net/mime/MultipartMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/lib/net/mime/DefaultMultipartMessageParser.java" />
       </list>
     </option>
   </component>
@@ -331,6 +560,96 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jdbc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jdbc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="it" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -338,9 +657,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Project" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/my/lib" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java/my/lib/data/jdbc" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
@@ -362,13 +681,14 @@
       <recent name="my.lib.data.jdbc" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\zyake\Documents\GitHub\my_lib\lib\src\test\java\my\lib\data" />
       <recent name="C:\Users\zyake\Documents\GitHub\my_lib\lib\src\test\java\my\lib" />
+      <recent name="C:\Users\zyake\Documents\GitHub\my_lib\lib\src\test\java\my\lib\data" />
       <recent name="C:\Users\zyake\Documents\GitHub\my_lib\lib\src\main\java\my\lib\data" />
       <recent name="C:\Users\zyake\Documents\GitHub\my_lib\lib\src\main\java\my\lib\data\trn" />
       <recent name="C:\Users\zyake\Documents\GitHub\my_lib\lib\src\main\java\my\lib\util" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="my.lib.data.jdbc" />
       <recent name="my.lib" />
     </key>
   </component>
@@ -588,7 +908,7 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="96" y="96" width="1174" height="576" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.61858976" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -601,9 +921,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11195159" sideWeight="0.61858976" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2753404" sideWeight="0.61858976" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2753404" sideWeight="0.61858976" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38141027" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38141027" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -673,84 +993,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/lib/data/jdbc/config/SqlExpressionParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/lib/data/jdbc/TrnConnectionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="35" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/my/lib/ProcessResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="33" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/lib/data/resource/UrlResourceDataMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="29" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/lib/data/jdbc/ConnectionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="17" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/my/lib/data/jdbc/TestDataSourceUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/my/lib/data/jdbc/config/NamedParameterSqlExpressionParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="7" selection-start="4250" selection-end="4250" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/lib/data/jdbc/DataSourceConnectionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="43" selection-start="2398" selection-end="2398" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/my/lib/TestResourceUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="14" selection-start="2658" selection-end="2658" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/my/lib/data/jdbc/config/SaxJdbcDataMapperConfigParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="93" selection-start="1520" selection-end="1520" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/my/lib/data/jdbc/JdbcDataMapperFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="23" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
@@ -796,8 +1038,116 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="29" selection-start="938" selection-end="938" vertical-scroll-proportion="1.2291666">
+        <state line="4" column="23" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/my/lib/data/jdbc/it/JdbcDataMapperIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="20" selection-start="3228" selection-end="3228" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3144#3160#0" expanded="true" />
+            <element signature="e#4298#4314#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/my/lib/data/jdbc/it/TransactionManagementIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="49" selection-start="3303" selection-end="3303" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#2400#2880#0" expanded="true" />
+            <element signature="e#2869#2870#0" expanded="true" />
+            <element signature="e#2919#3404#0" expanded="true" />
+            <element signature="e#3393#3394#0" expanded="true" />
+            <element signature="e#4818#5298#0" expanded="true" />
+            <element signature="e#5287#5288#0" expanded="true" />
+            <element signature="e#5337#6189#0" expanded="true" />
+            <element signature="e#6178#6179#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/my/lib/net/mime/ofm/injectors/FormDataFieldInjectorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="0" selection-start="2921" selection-end="2921" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#593#604#0" expanded="true" />
+            <element signature="e#716#728#0" expanded="true" />
+            <element signature="e#1271#1282#0" expanded="true" />
+            <element signature="e#1394#1406#0" expanded="true" />
+            <element signature="e#1894#1905#0" expanded="true" />
+            <element signature="e#2017#2029#0" expanded="true" />
+            <element signature="e#2475#2486#0" expanded="true" />
+            <element signature="e#2598#2610#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/my/lib/net/mime/ofm/DefaultMultipartMessageMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="63" selection-start="1844" selection-end="1844" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1066#1076#0" expanded="true" />
+            <element signature="e#1125#1136#0" expanded="true" />
+            <element signature="e#1229#1241#0" expanded="true" />
+            <element signature="e#1422#1433#0" expanded="true" />
+            <element signature="e#1529#1541#0" expanded="true" />
+            <element signature="e#1725#1736#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/lib/net/mime/MIMEHeader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="54" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/lib/net/mime/DefaultMIMEHeaderParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="56" selection-start="663" selection-end="663" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/lib/net/mime/ofm/MapperBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="57" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#288#305#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/lib/net/mime/BodyPart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="52" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#182#194#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/lib/net/mime/MultipartMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="52" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#190#200#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/lib/net/mime/DefaultMultipartMessageParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="58" selection-start="2549" selection-end="2549" vertical-scroll-proportion="0.33333334">
+          <folding>
+            <element signature="e#689#701#0" expanded="true" />
+            <element signature="e#798#808#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

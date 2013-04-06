@@ -6,7 +6,7 @@ import java.util.List;
 
 public class BodyPart {
 
-	private List<MIMEHeader> headers = new ArrayList<>();
+	private List<MIMEHeader> headers = new ArrayList<MIMEHeader>();
 
 	private String entity;
 

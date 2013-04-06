@@ -8,7 +8,7 @@ import java.util.List;
 
 public class MapperBuilder {
 
-    private List<ConverterHolder> holders = new ArrayList<>();
+    private List<ConverterHolder> holders = new ArrayList<ConverterHolder>();
 
     private EntityInjector injector;
 

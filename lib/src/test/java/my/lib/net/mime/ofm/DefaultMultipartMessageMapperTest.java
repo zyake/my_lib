@@ -41,27 +41,27 @@ public class DefaultMultipartMessageMapperTest {
                 .build();
 
 		// test
-		List<BodyPart> bodyParts = new ArrayList<>();
+		List<BodyPart> bodyParts = new ArrayList<BodyPart>();
 		{
-			List<MIMEParam> params = new ArrayList<>();
+			List<MIMEParam> params = new ArrayList<MIMEParam>();
 			params.add(new MIMEParam("name", "name"));
-			List<MIMEHeader> headers = new ArrayList<>();
+			List<MIMEHeader> headers = new ArrayList<MIMEHeader>();
 			headers.add(new MIMEHeader("Content-Disposition",  "form-data", params));
 
 			bodyParts.add(new BodyPart("name1", headers));
 		}
 		{
-			List<MIMEParam> params = new ArrayList<>();
+			List<MIMEParam> params = new ArrayList<MIMEParam>();
 			params.add(new MIMEParam("name", "address"));
-			List<MIMEHeader> headers = new ArrayList<>();
+			List<MIMEHeader> headers = new ArrayList<MIMEHeader>();
 			headers.add(new MIMEHeader("Content-Disposition",  "form-data", params));
 
 			bodyParts.add(new BodyPart("address1", headers));
 		}
 		{
-			List<MIMEParam> params = new ArrayList<>();
+			List<MIMEParam> params = new ArrayList<MIMEParam>();
 			params.add(new MIMEParam("name", "birthday"));
-			List<MIMEHeader> headers = new ArrayList<>();
+			List<MIMEHeader> headers = new ArrayList<MIMEHeader>();
 			headers.add(new MIMEHeader("Content-Disposition",  "form-data", params));
 
 			bodyParts.add(new BodyPart("19870205", headers));

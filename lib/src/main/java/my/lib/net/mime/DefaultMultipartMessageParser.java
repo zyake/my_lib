@@ -30,10 +30,10 @@ public class DefaultMultipartMessageParser implements MultipartMessageParser {
 	public MultipartMessage parseMessage(String msg) {
 		Assert.notNull(msg, "msg");
 
-		List<MIMEHeader> headers = new ArrayList<>();
+		List<MIMEHeader> headers = new ArrayList<MIMEHeader>();
 		StringBuilder headerLine = new StringBuilder();
 
-		List<BodyPart> bodyParts = new ArrayList<>();
+		List<BodyPart> bodyParts = new ArrayList<BodyPart>();
 		StringBuilder entityLines = new StringBuilder();
 
 		ParserStates state = ParserStates.OnStart;
@@ -89,7 +89,7 @@ public class DefaultMultipartMessageParser implements MultipartMessageParser {
 					if ( foundNextPart || foundEndPart ) {
 						addNewBodyPart(headers, bodyParts, entityLines);
 
-						headers = new ArrayList<>();
+						headers = new ArrayList<MIMEHeader>();
 						entityLines = new StringBuilder();
 						state = ParserStates.OnHeader;
 
