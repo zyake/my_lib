@@ -3,7 +3,7 @@ package my.lib.net.mime;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import my.lib.common.Assert;
+import my.lib.util.Assert;
 import my.lib.net.mime.ofm.MIMEConvertException;
 
 public class MIMEUtil {

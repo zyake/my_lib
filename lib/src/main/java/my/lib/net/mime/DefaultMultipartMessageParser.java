@@ -3,7 +3,7 @@ package my.lib.net.mime;
 import java.util.ArrayList;
 import java.util.List;
 
-import my.lib.common.Assert;
+import my.lib.util.Assert;
 
 public class DefaultMultipartMessageParser implements MultipartMessageParser {
 

@@ -1,0 +1,21 @@
+<jdbc-datamapper>
+    <global>
+        # use own DataSource(without transaction manager)
+        dataaccess.mapper.jdbc.connectionmanager.fqcn=my.apps.phrasesearcher.dataaccess.jdbc.DataSourceConnectionManager
+        dataaccess.mapper.jdbc.connectionmanager.config.datasource.fqcn=org.h2.jdbcx.JdbcDataSource
+        dataaccess.mapper.jdbc.connectionmanager.config.datasource.URL=jdbc:test_temp
+        dataaccess.mapper.jdbc.connectionmanager.config.datasource.User=sa
+        dataaccess.mapper.jdbc.connectionmanager.config.datasource.Password=sa
+
+        dataaccess.mapper.jdbc.sqlexpressionparser.fqcn=my.apps.phrasesearcher.dataaccess.jdbc.NamedParameterSqlExpressionParser
+        dataaccess.mapper.jdbc.strategies.entity.fqcn=my.apps.phrasesearcher.dataaccess.jdbc.EntityRowMapper
+        dataaccess.mapper.jdbc.strategies.entity.config.setterresolver.fqcn=my.apps.phrasesearcher.dataaccess.jdbc.UnderScoreSetterResolver
+    </global>
+    <sqls>
+        <sql id="select-config" target="CategoryConfig" strategy="entity">
+            SELECT DataAccess, Logging, Writer
+             FROM CategoryConfig
+             WHERE ConfigName = {ConfigName}
+        </sql>
+    </sqls>
+</jdbc-datamapper>

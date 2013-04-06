@@ -2,7 +2,7 @@ package my.lib.net.mime.ofm.injectors;
 
 import java.lang.reflect.Field;
 
-import my.lib.common.ClassUtil;
+import my.lib.util.ClassUtil;
 import my.lib.net.mime.BodyPart;
 import my.lib.net.mime.MIMEUtil;
 import my.lib.net.mime.ofm.EntityInjector;

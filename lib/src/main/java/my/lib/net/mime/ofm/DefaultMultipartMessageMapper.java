@@ -1,6 +1,6 @@
 package my.lib.net.mime.ofm;
 
-import my.lib.common.Assert;
+import my.lib.util.Assert;
 import my.lib.net.mime.BodyPart;
 import my.lib.net.mime.MultipartMessage;
 
