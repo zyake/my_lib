@@ -33,7 +33,7 @@ public class DataSourceConnectionManagerTest {
         connectionManager.initialize(configMap);
 
         assertThat(connectionManager.toString(),
-                is("{ datasource=ds1: url=jdbc:h2:mem: user=sa, initialized=true }"));
+                is("{ datasource=ds3: url=jdbc:h2:mem: user=sa, initialized=true }"));
     }
 
     @Test

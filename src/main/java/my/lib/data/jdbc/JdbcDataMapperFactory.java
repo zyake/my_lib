@@ -29,19 +29,6 @@ public class JdbcDataMapperFactory implements DataMapperFactory {
 
     private boolean initialized = false;
 
-    public static DataMapper createDataMapperFromFile(String filePath) {
-        JdbcDataMapperConfigParser configParser = new SaxJdbcDataMapperConfigParser();
-        InputStream inputStream = FileUtil.loadInputStream(filePath);
-        JdbcDataMapperConfig dataMapperConfig = configParser.parseConfig(inputStream);
-
-        JdbcDataMapperFactory jdbcDataMapperFactory = new JdbcDataMapperFactory();
-        Map<String, Object> configMap = new HashMap<String, Object>();
-        configMap.put(CONFIG_DATAMAPPER_CONFIG, dataMapperConfig);
-        jdbcDataMapperFactory.initialize(configMap);
-
-        return jdbcDataMapperFactory.createDataMapper();
-    }
-
     @Override
     public void initialize(Map<String, Object> config) {
         JdbcDataMapperConfig dataMapperConfig = (JdbcDataMapperConfig) config.get(CONFIG_DATAMAPPER_CONFIG);

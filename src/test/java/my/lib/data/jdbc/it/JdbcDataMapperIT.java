@@ -3,8 +3,8 @@ package my.lib.data.jdbc.it;
 import my.lib.TestResourceUtil;
 import my.lib.data.DataAccessException;
 import my.lib.data.DataMapper;
+import my.lib.data.Mappers;
 import my.lib.data.jdbc.CategoryConfig;
-import my.lib.data.jdbc.JdbcDataMapperFactory;
 import my.lib.data.jdbc.JdbcDataMapperFactoryTest;
 import my.lib.data.jdbc.TestDataSourceUtil;
 import org.junit.After;
@@ -49,7 +49,7 @@ public class JdbcDataMapperIT {
         TestDataSourceUtil.executeQuery(dataSource.getConnection(),
                 "INSERT INTO CategoryConfig(Id, Config_Name) VALUES(1, 'TEST1'), (2, 'TEST2'), (3, 'TEST3')");
 
-        DataMapper dataMapper = JdbcDataMapperFactory.createDataMapperFromFile(
+        DataMapper dataMapper = Mappers.createForJdbc(
                 "test/" + PACKAGE_PATH + "jdbc-datamapper_success.xml");
 
         Map<String,Object> configMap = new HashMap<String, Object>();
@@ -66,7 +66,7 @@ public class JdbcDataMapperIT {
         TestDataSourceUtil.executeQuery(dataSource.getConnection(),
                 "INSERT INTO CategoryConfig(Id, Config_Name) VALUES(1, 'TEST1'), (2, 'TEST2'), (3, 'TEST3')");
 
-        DataMapper dataMapper = JdbcDataMapperFactory.createDataMapperFromFile(
+        DataMapper dataMapper = Mappers.createForJdbc(
                 "test/" + PACKAGE_PATH + "jdbc-datamapper_failure.xml");
 
         Map<String,Object> configMap = new HashMap<String, Object>();
@@ -76,7 +76,7 @@ public class JdbcDataMapperIT {
 
     @Test
     public void testInsertObjects_success() throws Exception {
-        DataMapper dataMapper = JdbcDataMapperFactory.createDataMapperFromFile(
+        DataMapper dataMapper = Mappers.createForJdbc(
                 "test/" + PACKAGE_PATH + "jdbc-datamapper_success.xml");
 
         List<CategoryConfig> categoryConfigs = new ArrayList<CategoryConfig>();
@@ -103,7 +103,7 @@ public class JdbcDataMapperIT {
 
     @Test(expected = DataAccessException.class)
     public void testInsertObjects_failure() throws Exception {
-        DataMapper dataMapper = JdbcDataMapperFactory.createDataMapperFromFile(
+        DataMapper dataMapper = Mappers.createForJdbc(
                 "test/" + PACKAGE_PATH + "jdbc-datamapper_failure.xml");
 
         List<CategoryConfig> categoryConfigs = new ArrayList<CategoryConfig>();
